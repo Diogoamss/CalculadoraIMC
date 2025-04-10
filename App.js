@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; //import das bibliotecas e arquivos
 import {
   StyleSheet,
   SafeAreaView,
@@ -11,17 +11,12 @@ import FormIMC from './src/components/FormIMC';
 
 export default function App() {
   return (
-    <KeyboardAvoidingView
-      style={{ flex: 1 }}
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-    >
       <SafeAreaView style={{ flex: 1 }}>
-        <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
+        <ScrollView contentContainerStyle={styles.container}>
           <Title />
           <FormIMC />
         </ScrollView>
       </SafeAreaView>
-    </KeyboardAvoidingView>
   );
 }
 

@@ -1,22 +1,25 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, View } from "react-native";
 
+//
 const PesoIdeal = ({altura}) => {
     if (!altura){
         return null;
     }
-
-    const alturaMetros = parseFloat(altura)/ 100;
-    const min = (18.5 * alturaMetros * alturaMetros);
-    const max = (24.9 * alturaMetros * alturaMetros);
+    const alturaMetros = parseFloat(altura)/100;
+    const min = 18.5 * (alturaMetros * alturaMetros)
+    const max = 24.9 * (alturaMetros * alturaMetros)
 
     return (
-        <Text style={styles.text}>
-            Peso ideal entre {min} kg e {max} kg
-        </Text>
+        <View>
+            <Text style={styles.Text}>peso ideal Minimo: {min.toFixed(2)}</Text>
+            <Text style={styles.Text}>peso ideal Maximo: {max.toFixed(2)}</Text>
+        </View>
     );
 
-};
+
+}
+
 
 const styles = StyleSheet.create({
     text: {

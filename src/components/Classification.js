@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native";
 
+//calssificando imc
 const classification = ({imc})=>{
 
     if (!imc) return null;
@@ -22,7 +23,7 @@ const classification = ({imc})=>{
         message = 'obesidade grau III';
     }
 
-    return <Text style={styles.Text}>Classificação: {message} </Text>
+    return <Text style={styles.Text}>Classificacao: {message} </Text>
 };
 
 const styles = StyleSheet.create({
@@ -30,9 +31,11 @@ const styles = StyleSheet.create({
         marginTop: 10,
         fontSize: 18,
         textAlign: 'center',
-        color: '#444',
+        color: '#444'
     },
+
 });
+
 
 
 
